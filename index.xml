@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>HeTao_yz</title>
+        <link>https://swagcode-io.github.io/demo/</link>
+        <description>Recent content on HeTao_yz</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 19 Sep 2025 14:28:06 +0800</lastBuildDate><atom:link href="https://swagcode-io.github.io/demo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Shell脚本的编写</title>
+        <link>https://swagcode-io.github.io/demo/post/shell%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/</link>
+        <pubDate>Fri, 19 Sep 2025 14:28:06 +0800</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/post/shell%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>为什么要开我的世界服务器</title>
+        <link>https://swagcode-io.github.io/demo/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%80%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <pubDate>Sat, 13 Sep 2025 23:00:28 +0800</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/post/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%BC%80%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+        <description>&lt;p&gt;&lt;em&gt;此文章实际写作2025年1月7日。文章当时并无标题。今日补档时进行了补充。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;如果你是一个我的世界玩家，能翻到这篇文章的话，说明是真的对我们感兴趣。我很感动很感激，也想让你留下来，听我说道几句。可以理解成一个腐竹内心深处的交心话。&lt;/p&gt;
+&lt;p&gt;如果你想通过这个官网，立刻来到服务器进行游玩的话。很遗憾的告诉你，现在服务器正在四周目的筹划准备阶段中，&lt;strong&gt;至少在今年（2025年），得等到七八月份才会开&lt;/strong&gt;。看到这里，如果感觉失望的话，你其实也可以直接走了，但如果对我们服务器感兴趣的话，你可以好好看看。有些东西我总想抒发出来。&lt;/p&gt;
+&lt;h2 id=&#34;我的童年游戏&#34;&gt;我的童年游戏
+&lt;/h2&gt;&lt;p&gt;时间拨回到2021年的暑假7月。当时我仅是一个高一生，过完那个暑假就高二了。新配了一个图拉丁电脑，在Steam上第一次体会到了电脑有独显的快乐。报复性的玩了一下战地1，GTA5，APEX，使命召唤等等游戏。刚开始玩还觉得打开了新世界的大门，但玩过了几个星期后，这些东西给我带来的感受总是空空的。就像（）一样，爽的只是那一刻。留下不了什么有意思的东西。于是我开始把目光转向我的童年游戏，我的世界。&lt;/p&gt;
+&lt;h3 id=&#34;游玩契机及联机折腾&#34;&gt;游玩契机及联机折腾
+&lt;/h3&gt;&lt;p&gt;我的世界这一款游戏，我记得很清楚，是一位我以前比较要好的朋友在我上小学四年级的时向我介绍的，虽然那位朋友现在早就不玩了。我看着像素的方块世界，深深的迷上了这种自由的感觉。你的所有想象，都能通过一个又一个的方块表达出来。在这一片不大的方块世界，承载了我不少的童年回忆，借着我的世界，我认识了不少有意思的网友，但最先认识的是没雨网友和猫网友，我们初中时经常聊天，使用游侠或者是当时流行的蛤蟆吃（蛤蟆吃没成功过）来联机我的世界。我们三人的时间在以前总是很难凑在一起。但一旦凑在一起了，哪怕是研究一下午如何联机而并没有实际玩多长时间MC，我都感觉是挺高兴的事情。当时我就在想，如果有一个平台，能够让要好的朋友很方便的联机一起玩，而不必把时间浪费在如何联机上面的话，就好了（我们当时使用独立的JE客户端来游玩游戏，不太喜欢爱玩盒子和爱玩mc）。&lt;/p&gt;
+&lt;h3 id=&#34;开服念头初起&#34;&gt;开服念头初起
+&lt;/h3&gt;&lt;p&gt;后面我发现，玩服务器是一种不错的解决方案，如果能找到一个生存服务器，也可以带朋友一起过去玩。省去了联机的烦恼。但当时国内的传统生存服务器，基本以圈钱为主，在实际游玩中，各种花里胡哨的名字前缀，管理混乱的资源世界，各种地皮权限，让我玩的晕头转向，见不到一位活的玩家。特别是高高在上的管理让我感到膈应，随意tp杀人，公屏说脏话。这是一个原版生存服该有的样子吗？我这样想。如果我能自己开服就好了。记得是初一的时候吧，好不容易用游侠成功和没雨网友联机成功。我在公屏里面发，以后一定要建立一个符合我理想中的生存服务器，邀请我的朋友能一起来玩……没雨表示支持，并给我发了多世界插件介绍内容。&lt;/p&gt;
+&lt;h2 id=&#34;偶遇cubegarden如识初恋&#34;&gt;偶遇CubeGarden，如识初恋
+&lt;/h2&gt;&lt;p&gt;话又说回来，我在初二下学期开始到高一暑假之前这段空挡，因为学业和设备的限制，就再也没玩过我的世界了。高一暑假，我回过头看这款老游戏。他已经不知不觉更新到了1.17版本了。我一开始也没多想玩。但当时前几个月，我在mcbbs看到了CubeGarden服务器（简称CG）时觉得有意思的收藏下来了。要不要试试这个服务器？抱着半信半疑的态度，我在群里要了个白名单。&lt;/p&gt;
+&lt;h3 id=&#34;原版化体验热情的玩家&#34;&gt;原版化体验，热情的玩家
+&lt;/h3&gt;&lt;p&gt;进入世界，我还是一片茫然的，没有以前生存服务器的大厅什么的，进去就直接是一个玩家世界了。我开始游玩。先试着撸树吧，欸！竟然能够撸掉（早期传统生存服会弹出权限，或弹出请移步至资源世界），至此，我好像一下子理解这个服务器的玩法了。因为很简单啊，就是按照单人游戏的思路去玩就好了，这是直觉性的（按照现在CG老腐竹KLP的话来说，就是原版化的游戏体验），随后有玩家开始在公屏向我发出小镇邀请，我也感觉到挺诧异，原来这里的玩家都是有血有肉的，我最终选择了lemon_juice的小镇。在这里，我第一次也是最后一次，在服务器里面建筑了一个山洞之家（我在其它服务器都没建过自己的家，甚至在未来，连自己的服务器里面也没有）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://swagcode-io.github.io/demo/cghome.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;我21年8月在CG修筑的山洞之家&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;管理友好的玩家氛围&#34;&gt;管理友好的玩家氛围
+&lt;/h3&gt;&lt;p&gt;CubeGarden的玩家氛围和玩家游戏体验，原版的纯粹在当时的我看来，就是最顶级的，简直是我理想中的原版生存服务器。里面的玩家有血有肉，管理也不会摆着高高的架子，而是耐心倾听玩家的反馈并予以高效地解决。对于我一初来乍到的回坑mc玩家来说，CG不以往任何的传统生存服，流畅度，自由度和玩家氛围都是秒杀前者的存在。“简直是我一直理想中的纯生存服务器”，给我以深深的震撼。我在CG游玩了一个半月。CG留下了我的山丘之家与铁路。我也留下了我的一段对CG的美好回忆。如果你想看我当时的更多截图，&lt;a class=&#34;link&#34; href=&#34;https://tieba.baidu.com/p/9312553875&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;可点击我&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;当时还邀请了一位朋友来玩CG。他在里面也玩的很开心。在CG里面修建了自己的海岛小镇。你说我最早认识的没雨网友和猫网友去哪里了。实际上我也叫了。记得猫来玩了一会就因学业没空了。而没雨当时也没有正版账号。可能也没有时间。如果当时早一点认识CubeGarden这个服务器就好了。&lt;/p&gt;
+&lt;h3 id=&#34;cg在我心中的第一次转折&#34;&gt;CG在我心中的第一次转折
+&lt;/h3&gt;&lt;p&gt;但后来发生了一件事情，虽然现在看来是一次服务器管理员为了拓展新玩法的有益尝试，但我当时还是有点受不了。记得当时CG新周目，管理员发了一个新周目征集意见。我在上面进行了填写反馈。原文如下：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;新周目玩法大体建议不变，仍然做纯生存相关，保持服务器的特色与传统内容，在此基础上，结合上周目的游玩体验，我有以下建议
+1，原先的mod建议保留，建议增加反作弊措施，防止灵魂出窍和矿透之类，但不建议搞圈地，锁箱子之类的，以限制玩家游玩自由度。
+2，更为便捷的交通方式，提升矿车速度之类的，或者加相关的火车模组之类，并且加大tpa的代价和门槛（其实也可以取消），可以让玩家更加重视合作，减少抱着侥幸心理的独龙，让出远门探险这件事情变得更加有挑战性，更有风险
+3，增加些随机事件，防止玩家进入长草期，比如说末影龙复活并来到主世界之类的，或者是陨石落地，这些随机事件需要提前几个小时或几天告诉玩家，以便玩家做出相关措施，若未做好措施，可能一夜回到解放前&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;总的来说就是保持原版的基调。群里面大部分玩家意见可能也是和我相似的。但结果当我进入新周目的时候，里面的各种副本，各种标签，让我觉得眼花缭乱，不仅如此，里面的世界还异常卡顿。当时我感觉，CG变味了。不过我还可以等到CG下一周目重回原版基调。但在此之间的过渡期该怎么办呢。于是我便自己尝试开服。了解了一下服务端的知识，选用了Spigot插件端开服，创了一个群，摇了几位CG的老玩家进来随便玩玩。用自己的笔记本电脑开了服务器，于2021年8月20日开服。&lt;/p&gt;
+&lt;h3 id=&#34;cg的仙逝&#34;&gt;CG的仙逝
+&lt;/h3&gt;&lt;p&gt;这也是快开学了吗，暑假也逼近尾声。我回到CG服务器，在CG自己家门口立了几张牌子，告知了自己的去向以及何时回归。但我当时总是隐隐的感觉，我这一去，以后就再也回不来了。于是上线咔咔拍了几张照片。照片在上文的更多截图。都发出来了。现在看来，这个决定万分正确。后面不仅CG不再提供服务。就连我当时玩的存档也找不到了**（如果你看到了这篇文章，知道CG 21年8月所属周目存档的下落的话，不管是能下载还是已经消失，都可以加我QQ好友告诉我，想知道一个结果）**&lt;/p&gt;
+&lt;h3 id=&#34;感谢cg告别cg&#34;&gt;感谢CG，告别CG
+&lt;/h3&gt;&lt;p&gt;我很感谢CubeGarden服务器，很感谢它给了我一段珍贵美好的回忆。这也是我的启蒙服务器。开服的想法很早就有，但具体的要开一个怎么样的服务器。是CubeGarden告诉我的。上文也提到了，初中的我当时就在想，如果有一个平台，能够让要好的朋友很方便的联机一起玩，而不必把时间浪费在如何联机上面的话，就好了。如今，进入一个服务器的社区，就是对这个想法的最好回答。我很希望CubeGarden能够一直运营下去，说真的如果CG当时还在，我根本不可能开自己的服务器。毕竟自己去从0打造一个社区，和直接去一个已经成熟的社区。我作为一个普通玩家，肯定是优先后者。&lt;/p&gt;
+&lt;h2 id=&#34;cg点灯照亮开服前路&#34;&gt;CG点灯，照亮开服前路
+&lt;/h2&gt;&lt;p&gt;说了这么多，我开服的动机其实也很简单，就是为了能让自己的朋友一起来玩Minecraft而已，但实际上也有自己的一些私心，就是想自己搭建一个像CubeGarden一样甚至更好的社区环境，自己再去玩自己的服务器，找回当年在CG游玩的纯粹快乐的感觉。可惜时过境迁，当年的稚嫩的健康阳光少年，如今也已经变成老态亚健康的青年了。心很难像以前一样静下来了。没雨，他现在忙于自己的校园学生会工作无法脱身。我深夜也emo。但emo的是过去，如果当年自己有这样的能力，开服去一起玩。那该多快乐啊。&lt;/p&gt;
+&lt;p&gt;如果在一个平行世界，有一个像我这样，苦于有好友有时间，却又无能为力很难联机的条件下。现在的我会选择果断出手帮助。如果你也是像我当年一样的状况的话，欢迎你来我的服务器。如果可以帮助到他人实现我当年的想法的话，我也能感到欣慰。这也是我服务器于今年决定向社区开放的原因。说大话就是回馈社区。说具体点，就是为了能够让玩家们有一个稳定的联机平台。如果你能带上自己的好友来一起玩，在这个服务器上的游玩经历，也能够像我当年在CG一样，留下一段珍贵美好的回忆的话。那就是我最大的慰藉了。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;本人联系方式QQ: 1936901178 如果对这个还在准备筹划周目阶段的服务器感兴趣的话，可以加我好友细聊。后面也会写自己服务器一，二，三周目开服的故事经历&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>记录一次WordPress网站被种马劫持的经历</title>
+        <link>https://swagcode-io.github.io/demo/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1wordpress%E7%BD%91%E7%AB%99%E8%A2%AB%E7%A7%8D%E9%A9%AC%E5%8A%AB%E6%8C%81%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+        <pubDate>Sat, 13 Sep 2025 12:32:46 +0800</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1wordpress%E7%BD%91%E7%AB%99%E8%A2%AB%E7%A7%8D%E9%A9%AC%E5%8A%AB%E6%8C%81%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+        <description>&lt;p&gt;&lt;em&gt;注：如果你想通过此文章了解网站被种马后的具体解决方法的话，那这篇文章可能会让你失望。此篇文章更多讲述如何预防这样的事情发生，对于第一句话提出的问题回答是，我直接把整个服务器都重置了。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;不对劲的开始&#34;&gt;不对劲的开始
+&lt;/h2&gt;&lt;p&gt;2025年8月份开始，我使用WordPress建站的网站在使用移动端访问时，会自动跳转不良页面，第二次刷新才正常进入。之后再进入也是正常。但每隔一段时间，这种情况就会复现一次。这样下去，我的网站很快就会被认定为不良网站。大半年努力做的SEO也将付之东流。&lt;/p&gt;
+&lt;h2 id=&#34;艰难的排查&#34;&gt;艰难的排查
+&lt;/h2&gt;&lt;p&gt;一开始以为是手机DNS被劫持的原因，想着重新设置一下路由设备的DNS记录即可。但还没开始操作呢，其他地区的网友也纷纷向我反馈了这个问题。由此一下子就排除了客户端DNS的原因（之后检查了服务器的DNS服务器设置，也没有问题）。看来这次的问题比想像中的更严重。是网站服务器被种马劫持了。由于技术力低下以及前端知识的匮乏。我只能把在主流搜索引擎查询到的可能结果都一一尝试了一次。甚至使用DeepSeek查阅源码。均没有问题。这让我很崩溃。&lt;/p&gt;
+&lt;p&gt;下图为热心网友 &lt;a class=&#34;link&#34; href=&#34;https://cnklp.su/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Creeper23456&lt;/a&gt; 的网站抓包结果，查询到了可疑图像。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://swagcode-io.github.io/demo/wpcatch.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;wpcatchpng&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下定决心重构&#34;&gt;下定决心重构
+&lt;/h2&gt;&lt;p&gt;这玩意就像艾滋病一样，预防简单，但中招解决就挺困难。由于不确定网站备份是否也已经中招，只好下定决心重构一个。幸好之前早有设计，按照原先的设计很快就完成了重构。我使用的香港的云服务器。一键重装了镜像，用核弹打蚊子的，相当无奈的方法解决了种马问题。&lt;/p&gt;
+&lt;h2 id=&#34;之后的防护措施&#34;&gt;之后的防护措施
+&lt;/h2&gt;&lt;h3 id=&#34;使用cloudflare的cdn和waf&#34;&gt;使用Cloudflare的CDN和WAF
+&lt;/h3&gt;&lt;p&gt;这是相当必要的。之前的网站为了保护原IP，其实也套上了Cloudflare的CDN，但之后懒得设置WAF规则，也忘记了此事，WAF网站防火墙可以防止风险IP的扫描和CC攻击等等。大家可以参考此文章进行&lt;a class=&#34;link&#34; href=&#34;https://luotianyi.vc/6140.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【CloudFlare】通用防火墙安全配置分享 – Luminous&amp;rsquo; Home&lt;/a&gt; 进行Cloudflare WAF规则的配置。&lt;/p&gt;
+&lt;h3 id=&#34;使用雷池waf反代保护源网站&#34;&gt;使用雷池WAF反代保护源网站
+&lt;/h3&gt;&lt;p&gt;雷池WAF是国内相当出名的WAF提供商，在Github上有17.7K个Star（截至本文发布时间），它可以防止更进一步的注入式攻击和CC攻击，甚至可以给敏感的页面加上身份验证，十分的智能。社区版本是免费的。&lt;/p&gt;
+&lt;p&gt;根据 &lt;a class=&#34;link&#34; href=&#34;https://help.waf-ce.chaitin.cn/welcome&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;雷池 WAF 帮助文档&lt;/a&gt; ，我使用了自动安装方法：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;bash -c &amp;#34;$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/manager.sh)&amp;#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装好了之后，在后台设置好了反向代理。雷池WAF原理其实和Nginx差不多。都是将流量导入至自身，经过过滤后把安全的流量再转发至源站。能起到非常不错的防护效果。&lt;/p&gt;
+&lt;h4 id=&#34;注意&#34;&gt;注意
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;雷池社区WAF仅支持10个反向代理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;雷池WAF推荐分布式安装，不推荐单主机安装&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保护雷池WAF的后台，可关闭该功能端口的公网访问（设置防火墙）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;后话&#34;&gt;后话
+&lt;/h2&gt;&lt;p&gt;这件事情给我带来的警示是，网站的搭建固然幸苦，但是网站的部署同样也非常重要。这件事过后，我在朋友圈看到一位网友也搭建了自己的网站。出于好心的目的，我尝试检查了这个网站。没有套CDN，也没有WAF防护。甚至我使用域名查出来的源IP都能进行HTTP访问（域名访问为HTTPS）。Nginx估计也是没限制。相当之危险。为了不让他的小站变成下一个不良网站。我把建议都给到了他。&lt;/p&gt;
+&lt;p&gt;理解搭建设计网站的辛苦，想着匆匆上线兑现自己的劳动成果，但是网站的安全可靠部署也是值得投入同样心血的活，这样做也是对自己劳动成果的负责。让我们保护好自己的网站吧。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>家宽获取公网后如何对外提供服务</title>
+        <link>https://swagcode-io.github.io/demo/post/%E5%AE%B6%E5%AE%BD%E8%8E%B7%E5%8F%96%E5%85%AC%E7%BD%91%E5%90%8E%E5%A6%82%E4%BD%95%E5%AF%B9%E5%A4%96%E6%8F%90%E4%BE%9B%E6%9C%8D%E5%8A%A1/</link>
+        <pubDate>Thu, 11 Sep 2025 20:15:03 +0800</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/post/%E5%AE%B6%E5%AE%BD%E8%8E%B7%E5%8F%96%E5%85%AC%E7%BD%91%E5%90%8E%E5%A6%82%E4%BD%95%E5%AF%B9%E5%A4%96%E6%8F%90%E4%BE%9B%E6%9C%8D%E5%8A%A1/</guid>
+        <description>&lt;p&gt;&lt;em&gt;家宽即家庭宽带，此篇讨论当家庭宽带获取到公网IP时应如何设置使用，以让用户从公网环境连接至你的部署服务。本文以玩家连接Minecraft服务器为例进行说明。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;目录&#34;&gt;目录
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; &gt;前言&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e5%af%b9%e5%85%ac%e7%bd%91%e5%bc%80%e6%94%be&#34; &gt;对公网开放&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#ddnsipv4ipv6&#34; &gt;DDNS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#ipv6&#34; &gt;IPv6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;前言&#34;&gt;前言
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;家宽获取到的公网IP均在家庭网络环境中的最上层NAT设备，即拨号设备。哪个路由设备负责拨号。即哪个路由设备拥有公网IP。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般情况下光猫负责拨号，而路由器为IP自动获取。这种情况下光猫拥有公网IP。如果路由器后台设置为PPPoE拨号，则路由器拥有公网IP，光猫仅负责光电信号转换。请注意，在下述对”路由设备“的表述中，均代指已获取公网IP的路由设备。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用家宽公网IP直连速度快，且不产生其他额外费用。但请注意安全性问题。当家宽被DDoS时，需尽快手动重启路由设备更换IP并断开DDNS服务。避免被网络提供商发现异常导致断开网络，甚至造成公网IP收回的惨重结果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;家宽IP的使用应当谨慎。大量的上传和跨省流量可能被网络提供商怀疑跑PCDN服务，导致降速或公网IP被收回。尽可能不要使用家宽IP跑敏感服务，如FRP服务或WEB服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;家宽公网IP一般情况下无法使用443，80端口。此端口通常用于WEB服务。同上，所以即使可以使用也应避免使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;家宽IP线路少，并非BGP网络，其他地区其他网络提供商的玩家在跨省流量结算时使用家宽IP连接服务器时，会导致高延迟。可使用FRP缓解该情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无论你使用下述任何方法，均可使用该在线工具测试连通性 &lt;a class=&#34;link&#34; href=&#34;https://www.itdog.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;itdog&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;对公网开放&#34;&gt;对公网开放
+&lt;/h1&gt;&lt;p&gt;以下讨论两种使用家宽公网IP对公网暴露内网服务的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#dmz&#34; &gt;DMZ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;#%e7%ab%af%e5%8f%a3%e6%98%a0%e5%b0%84&#34; &gt;端口映射&lt;/a&gt;（端口转发）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;dmzvs端口映射&#34;&gt;DMZ   vs.   端口映射
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;div style=&#34;width:50px&#34;&gt;&lt;/div&gt;&lt;/th&gt;
+          &lt;th&gt;DMZ&lt;/th&gt;
+          &lt;th&gt;端口映射&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;效果&lt;/td&gt;
+          &lt;td&gt;将内网内一台主机（一个内网IP）的端口全部暴露给互联网。&lt;/td&gt;
+          &lt;td&gt;将内网内某一内网IP的某一端口暴露给互联网。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;功能&lt;/td&gt;
+          &lt;td&gt;仅支持一台主机（一个内网IP）向外提供服务&lt;/td&gt;
+          &lt;td&gt;支持多台主机（多个内网IP）向外提供服务。（&amp;ldquo;多台&amp;quot;取决于路由设备支持的最大端口映射规则数量）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;安全性&lt;/td&gt;
+          &lt;td&gt;安全性低，该主机的全部端口暴露在互联网。需要在主机或路由器侧添加防火墙规则以防护&lt;/td&gt;
+          &lt;td&gt;安全性高，仅暴露某一内网IP指定的端口。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;适用性&lt;/td&gt;
+          &lt;td&gt;适用性强，路由设备基本均支持DMZ功能&lt;/td&gt;
+          &lt;td&gt;适用性一般，老旧路由设备可能对端口映射的支持不佳导致无法连通&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;固定ipv4内网地址必要准备&#34;&gt;固定IPv4内网地址（必要准备）
+&lt;/h2&gt;&lt;p&gt;主机重启时，路由设备DHCP服务将重新分配新的主机号至主机，导致原先设置的DMZ内网地址失效。在开启DMZ功能前，需手动设置IPv4地址为静态地址。保证其每次开关机均为同一内网IP。&lt;/p&gt;
+&lt;p&gt;推荐将内网IP的主机号部分绑定至高位，例如&lt;code&gt;192.168.1.220&lt;/code&gt;。主机号（通常情况下即为最后的数字）推荐大于100且小于254。否则家中的其他联网设备有概率占用低位主机号地址导致主机无法使用该内网IP。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若主机号设置低位号，例如192,168.1.8。可能一开始即被其他设备占用导致设置失败。即使设置成功，在服务器重启时若家庭中其他设备连网占用该地址，则会导致主机静态地址失效，将无法联网，不利于远程维护。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dmz&#34;&gt;DMZ
+&lt;/h2&gt;&lt;h3 id=&#34;--作用&#34;&gt;- 作用
+&lt;/h3&gt;&lt;p&gt;在路由设备（路由器或光猫）已获取到公网IP的前提下，将内网中的一台主机暴露给互联网，以便运行一些需要被公网广泛访问的服务。&lt;/p&gt;
+&lt;h3 id=&#34;--dmz功能&#34;&gt;- DMZ功能
+&lt;/h3&gt;&lt;p&gt;可将一台处于内网地址内的主机端口全部映射到公网环境中。&lt;/p&gt;
+&lt;h3 id=&#34;--使用&#34;&gt;- 使用
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;确保主机与路由设备处于同一局域网（通过Wi-Fi或有线连接）。&lt;/li&gt;
+&lt;li&gt;登录路由设备的后台管理界面（管理地址通常标注于路由器机身标签）。&lt;/li&gt;
+&lt;li&gt;找到“DMZ主机”或“隔离区”功能设置项。&lt;/li&gt;
+&lt;li&gt;填写您要设置的主机的静态内网IP地址（例如 &lt;code&gt;192.168.1.220&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;启用该功能并保存设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设置完成后若无法生效，应检查主机防火墙或DMZ设置。或检查路由设备防火墙规则。路由设备防火墙在万不得已的前提下，最好不要关闭。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;--注意事项&#34;&gt;- 注意事项
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;DMZ功能相较于端口映射，使用更为方便。特别是在端口映射普遍有数量限制或甚至无法生效的路由设备上，DMZ功能适用范围更广。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;但是，由于DMZ功能将主机的全部端口都暴露在了公网环境中，安全性不如端口映射。可打开主机的防火墙，仅开启对外提供服务的端口，关闭不提供服务或敏感服务的端口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;绝大多数家用路由器同一时间只能设置一台DMZ主机。如需将不同服务暴露于多台主机，必须使用&lt;strong&gt;端口映射&lt;/strong&gt;功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;端口映射&#34;&gt;端口映射
+&lt;/h2&gt;&lt;h3 id=&#34;--作用-1&#34;&gt;- 作用
+&lt;/h3&gt;&lt;p&gt;在路由设备（路由器或光猫）已获取到公网IP的前提下，将内网中的某一内网IP的某一端口暴露给互联网，以便运行一些需要被公网广泛访问的服务。&lt;/p&gt;
+&lt;p&gt;如果家中部署多台主机且均需对外提供服务，选择端口映射是不错的选择。如果家中仅部署一台主机，且在主机上部署了非常密集的服务，需要同时用到多个端口号（数量远超路由器端口映射规则最大数量），请选择DMZ功能。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果有更为复杂的业务需求，如多台主机均需暴露大量端口号。则不在本教程的范畴内。可自行学习交换机的使用以解决该需求。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;--使用-1&#34;&gt;- 使用
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;确保主机与路由设备处于同一局域网（通过Wi-Fi或有线连接）。&lt;/li&gt;
+&lt;li&gt;登录路由设备的后台管理界面（管理地址通常标注于路由器机身标签）。&lt;/li&gt;
+&lt;li&gt;找到“端口映射”“虚拟服务器”“NAT转发”等功能设置项。&lt;/li&gt;
+&lt;li&gt;填写您要设置的主机的静态内网IP地址和服务端口号（例如 &lt;code&gt;192.168.1.220:25565&lt;/code&gt;，&lt;code&gt;192.168.1.220:25566&lt;/code&gt; &lt;code&gt;192.168.1.200:25565&lt;/code&gt;等，可填写多条，最大规则数量取决于路由设备的支持量）。&lt;/li&gt;
+&lt;li&gt;启用该功能并保存设置。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;部分老旧光猫或路由器对端口映射的支持不佳。设置完之后可能无法连通。可使用适用范围更广的DMZ功能代替。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ddnsipv4ipv6&#34;&gt;DDNS（IPv4，IPv6）
+&lt;/h2&gt;&lt;p&gt;除非花钱购买专线，否则绝大部分家庭宽带申请到的公网IP均为动态IP，即当每次路由设备重播或重启时，公网IP有极大概率发生变化。公网IP发生变化后，先前的公网IP将失效。服主需要查询新的IP，再将新IP给到玩家以进入服务器。此类操作繁杂且发生时间不可测。&lt;/p&gt;
+&lt;h3 id=&#34;作用&#34;&gt;作用
+&lt;/h3&gt;&lt;p&gt;DDNS可以每隔一段时间向上游查询最新的IP，并将其绑定到域名上。玩家可使用域名进入服务器。无需担心IP变化导致无法进入服务器，另外一个意向不到的好处是，&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/opus/830159505524260886&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用域名进入Minecraft服务器的速度将更快&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;域名获取&#34;&gt;域名获取
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在各大云服务厂商购买域名&lt;/li&gt;
+&lt;li&gt;部分路由器可提供免费的二级域名，具体可查询路由器后台设置部分&lt;/li&gt;
+&lt;li&gt;在网络上查询免费的二级域名提供商，获取免费二级域名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用&#34;&gt;使用
+&lt;/h3&gt;&lt;p&gt;在github上使用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/jeessy2/ddns-go&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DDNS-GO&lt;/a&gt; 开源项目，并按照其说明进行部署即可。&lt;/p&gt;
+&lt;h2 id=&#34;ipv6&#34;&gt;IPv6
+&lt;/h2&gt;&lt;p&gt;IPv6是IPv4的升级，是新一代IP协议。原则上IPv6网络地址资源充足，不存在NAT，其地址即为公网IP。但实际网络环境中，现多有不支持IPv6，或IPv6为内网的情况。且IPv6公网地址服务器要求玩家客户端侧也需持有IPv6公网地址，才可连通。&lt;/p&gt;
+&lt;h3 id=&#34;查询是否拥有ipv6公网地址&#34;&gt;查询是否拥有IPv6公网地址
+&lt;/h3&gt;&lt;p&gt;使用 &lt;a class=&#34;link&#34; href=&#34;https://ipv6ready.me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;检测网站&lt;/a&gt; 进行检测。若显示不支持，可尝试去路由设备后台开启IPv6功能。若开启后仍然不支持，请询问自己的网络提供商获取或放弃该方式。&lt;/p&gt;
+&lt;p&gt;内网IPv6通常为fe80开头，若显示为内网IPv6地址。则无法连接。&lt;/p&gt;
+&lt;h3 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;IPv6连接服务器需要服务器和玩家客户端网络环境均持有IPv6公网地址&lt;/li&gt;
+&lt;li&gt;Java版服务器对IPv6连接支持体验不佳，而基岩版服务器的支持更好&lt;/li&gt;
+&lt;li&gt;IPv6地址外接端口与IPv4的表示方式略有不同，需将地址部分用方括号[]包裹起来，端口号紧随其后。例如： &lt;code&gt;[2001:db8:85a3::8a2e:370:7334]:25566&lt;/code&gt;（假设25566端口为Minecraft服务器端口）&lt;/li&gt;
+&lt;li&gt;IPv6公网设置成功后，需要放行主机侧的防火墙服务端口。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>关于此博客</title>
+        <link>https://swagcode-io.github.io/demo/about/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/about/</guid>
+        <description>&lt;p&gt;此博客网站还在开发中&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;为什么使用博客&#34;&gt;为什么使用博客
+&lt;/h2&gt;&lt;h3 id=&#34;承载长内容的媒介&#34;&gt;承载长内容的媒介
+&lt;/h3&gt;&lt;p&gt;一些值得分享的长内容以及个人感慨，技术分享，备忘内容等。并不适宜在QQ空间或朋友圈等公共空间发布。不仅因为有不同圈子的外人，其次这些快社群媒体也并不支持适宜长文本的MarkDown格式。本着不想占用公共空间的心态。于是便有了这个博客。&lt;/p&gt;
+&lt;h3 id=&#34;可靠长期的保存&#34;&gt;可靠长期的保存
+&lt;/h3&gt;&lt;p&gt;博客内容全部存储在家里云服务器中。未来将上传至Github Page做备份。虽然现在的QQ空间等也能查看数十年前的内容，但图片部分已经无法查看。当国内的主流社交媒体宣称：&lt;a class=&#34;link&#34; href=&#34;https://page.sm.cn/blm/midpage-317/index?h=v7.wenda_llm.quark.cn&amp;amp;id=24_7d15af5de1a994d7be1c2898231d27e7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;用户只有账号的使用权，而非所有权&lt;/a&gt;时。意味着它们并不需要为我们的内容保存而负责。而且从幼儿园的时候，老师就教导过我们“自己的东西自己保管”，所以对于个人真的珍贵且值得备忘保存的文章，我应该要自己负责自己保管。QQ空间或者朋友圈，仅适合分享想分享给朋友的短内容。&lt;/p&gt;
+&lt;h3 id=&#34;个性完全的风格&#34;&gt;个性完全的风格
+&lt;/h3&gt;&lt;p&gt;有朋友说，完全有第三方博客网站可供给我这样的需求。为何自己还要亲自动手搭建一个。首先，就算是第三方博客，原因同上，也很难保证内容长期可靠的存在。其次的主要原因是。我认为：博客是人的个性化表达空间。博客的样式应该自己完全可控制。第三方很难满足这样多元的需求。我个人喜欢简约风格的博客界面。所以使用了快速响应的hugo静态网站作为搭建博客的框架。&lt;/p&gt;
+&lt;h2 id=&#34;关于我&#34;&gt;关于我
+&lt;/h2&gt;&lt;p&gt;我是某二本大三学生，目前正在运营一个 &lt;a class=&#34;link&#34; href=&#34;https://www.blockmember.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MineCraft 社区公益生存服&lt;/a&gt; ，使用家里云服务器。同时该服务器还主持了其他业务。无论你是想了解我的服务器，还是业务范围，甚至是我。都可以通过我头像下方的联系方式联络到我。&lt;/p&gt;
+&lt;h3 id=&#34;我的世界服务器&#34;&gt;我的世界服务器？
+&lt;/h3&gt;&lt;p&gt;和我的个人IP博客不同，这是一个高度社区化的服务器。我在其中仅参与运维与大方向指导工作。如果对你我的世界原版生存感兴趣，欢迎通过上述链接进入服务器。&lt;/p&gt;
+&lt;p&gt;&lt;span id=&#34;timeDate&#34;&gt;载入天数&amp;hellip;&lt;/span&gt;&lt;span id=&#34;times&#34;&gt;载入时分秒&amp;hellip;&lt;/span&gt;&lt;/p&gt;
+&lt;script language=&#34;javascript&#34;&gt; 
+    var now = new Date();
+    function createtime(){
+        now.setTime(now.getTime()+250); // 当前时间
+        var grt= new Date(&#34;2025/09/11 12:00:00&#34;); //网站诞生时间
+        days = (now - grt ) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = &#34;0&#34; + hnum;}
+        minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if(String(mnum).length ==1 ){mnum = &#34;0&#34; + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if(String(snum).length ==1 ){snum = &#34;0&#34; + snum;}
+
+        document.getElementById(&#34;timeDate&#34;).innerHTML = &#34;本站已稳定运行&#34;+dnum+&#34; 天 &#34;;
+        document.getElementById(&#34;times&#34;).innerHTML = hnum + &#34; 小时 &#34; + mnum + &#34; 分 &#34; + snum + &#34; 秒&#34;
+    }
+    setInterval(&#34;createtime()&#34;,250); 
+&lt;/script&gt; 
+</description>
+        </item>
+        <item>
+        <title>请输入查询文本</title>
+        <link>https://swagcode-io.github.io/demo/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/search/</guid>
+        <description>&lt;link href=&#34;https://swagcode-io.github.io/demo/pagefind/pagefind-ui.css&#34; rel=&#34;stylesheet&#34;&gt;
+&lt;script src=&#34;https://swagcode-io.github.io/demo/pagefind/pagefind-ui.js&#34;&gt;&lt;/script&gt;
+&lt;div id=&#34;search&#34;&gt;&lt;/div&gt;
+&lt;script&gt;
+    window.addEventListener(&#39;DOMContentLoaded&#39;, (event) =&gt; {
+        new PagefindUI({ element: &#34;#search&#34;, showSubResults: true });
+    });
+&lt;/script&gt;
+</description>
+        </item>
+        <item>
+        <title>文章归档</title>
+        <link>https://swagcode-io.github.io/demo/archives/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://swagcode-io.github.io/demo/archives/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

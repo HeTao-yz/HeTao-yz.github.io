@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="注：如果你想通过此文章了解网站被种马后的具体解决方法的话，那这篇文章可能会让你失望。此篇文章更多讲述如何预防这样的事情发生，对于第一句话提出的问题回答是，我直接把整个服务器都重置了。\n不对劲的开始 2025年8月份开始，我使用WordPress建站的网站在使用移动端访问时，会自动跳转不良页面，第二次刷新才正常进入。之后再进入也是正常。但每隔一段时间，这种情况就会复现一次。这样下去，我的网站很快就会被认定为不良网站。大半年努力做的SEO也将付之东流。\n艰难的排查 一开始以为是手机DNS被劫持的原因，想着重新设置一下路由设备的DNS记录即可。但还没开始操作呢，其他地区的网友也纷纷向我反馈了这个问题。由此一下子就排除了客户端DNS的原因（之后检查了服务器的DNS服务器设置，也没有问题）。看来这次的问题比想像中的更严重。是网站服务器被种马劫持了。由于技术力低下以及前端知识的匮乏。我只能把在主流搜索引擎查询到的可能结果都一一尝试了一次。甚至使用DeepSeek查阅源码。均没有问题。这让我很崩溃。\n下图为热心网友 Creeper23456 的网站抓包结果，查询到了可疑图像。\n下定决心重构 这玩意就像艾滋病一样，预防简单，但中招解决就挺困难。由于不确定网站备份是否也已经中招，只好下定决心重构一个。幸好之前早有设计，按照原先的设计很快就完成了重构。我使用的香港的云服务器。一键重装了镜像，用核弹打蚊子的，相当无奈的方法解决了种马问题。\n之后的防护措施 使用Cloudflare的CDN和WAF 这是相当必要的。之前的网站为了保护原IP，其实也套上了Cloudflare的CDN，但之后懒得设置WAF规则，也忘记了此事，WAF网站防火墙可以防止风险IP的扫描和CC攻击等等。大家可以参考此文章进行【CloudFlare】通用防火墙安全配置分享 – Luminous&rsquo; Home 进行Cloudflare WAF规则的配置。\n使用雷池WAF反代保护源网站 雷池WAF是国内相当出名的WAF提供商，在Github上有17.7K个Star（截至本文发布时间），它可以防止更进一步的注入式攻击和CC攻击，甚至可以给敏感的页面加上身份验证，十分的智能。社区版本是免费的。\n根据 雷池 WAF 帮助文档 ，我使用了自动安装方法：\nbash -c &#34;$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/manager.sh)&#34; 安装好了之后，在后台设置好了反向代理。雷池WAF原理其实和Nginx差不多。都是将流量导入至自身，经过过滤后把安全的流量再转发至源站。能起到非常不错的防护效果。\n注意 雷池社区WAF仅支持10个反向代理\n雷池WAF推荐分布式安装，不推荐单主机安装\n保护雷池WAF的后台，可关闭该功能端口的公网访问（设置防火墙）\n后话 这件事情给我带来的警示是，网站的搭建固然幸苦，但是网站的部署同样也非常重要。这件事过后，我在朋友圈看到一位网友也搭建了自己的网站。出于好心的目的，我尝试检查了这个网站。没有套CDN，也没有WAF防护。甚至我使用域名查出来的源IP都能进行HTTP访问（域名访问为HTTPS）。Nginx估计也是没限制。相当之危险。为了不让他的小站变成下一个不良网站。我把建议都给到了他。\n理解搭建设计网站的辛苦，想着匆匆上线兑现自己的劳动成果，但是网站的安全可靠部署也是值得投入同样心血的活，这样做也是对自己劳动成果的负责。让我们保护好自己的网站吧。\n">
+<title>记录一次WordPress网站被种马劫持的经历</title>
+
+<link rel='canonical' href='https://swagcode-io.github.io/demo/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1wordpress%E7%BD%91%E7%AB%99%E8%A2%AB%E7%A7%8D%E9%A9%AC%E5%8A%AB%E6%8C%81%E7%9A%84%E7%BB%8F%E5%8E%86/'>
+
+<link rel="stylesheet" href="/demo/scss/style.min.87ca80477aa1448125ceb18fc23b426abe36aef3a929499010496741e153b66e.css"><meta property='og:title' content="记录一次WordPress网站被种马劫持的经历">
+<meta property='og:description' content="注：如果你想通过此文章了解网站被种马后的具体解决方法的话，那这篇文章可能会让你失望。此篇文章更多讲述如何预防这样的事情发生，对于第一句话提出的问题回答是，我直接把整个服务器都重置了。\n不对劲的开始 2025年8月份开始，我使用WordPress建站的网站在使用移动端访问时，会自动跳转不良页面，第二次刷新才正常进入。之后再进入也是正常。但每隔一段时间，这种情况就会复现一次。这样下去，我的网站很快就会被认定为不良网站。大半年努力做的SEO也将付之东流。\n艰难的排查 一开始以为是手机DNS被劫持的原因，想着重新设置一下路由设备的DNS记录即可。但还没开始操作呢，其他地区的网友也纷纷向我反馈了这个问题。由此一下子就排除了客户端DNS的原因（之后检查了服务器的DNS服务器设置，也没有问题）。看来这次的问题比想像中的更严重。是网站服务器被种马劫持了。由于技术力低下以及前端知识的匮乏。我只能把在主流搜索引擎查询到的可能结果都一一尝试了一次。甚至使用DeepSeek查阅源码。均没有问题。这让我很崩溃。\n下图为热心网友 Creeper23456 的网站抓包结果，查询到了可疑图像。\n下定决心重构 这玩意就像艾滋病一样，预防简单，但中招解决就挺困难。由于不确定网站备份是否也已经中招，只好下定决心重构一个。幸好之前早有设计，按照原先的设计很快就完成了重构。我使用的香港的云服务器。一键重装了镜像，用核弹打蚊子的，相当无奈的方法解决了种马问题。\n之后的防护措施 使用Cloudflare的CDN和WAF 这是相当必要的。之前的网站为了保护原IP，其实也套上了Cloudflare的CDN，但之后懒得设置WAF规则，也忘记了此事，WAF网站防火墙可以防止风险IP的扫描和CC攻击等等。大家可以参考此文章进行【CloudFlare】通用防火墙安全配置分享 – Luminous&rsquo; Home 进行Cloudflare WAF规则的配置。\n使用雷池WAF反代保护源网站 雷池WAF是国内相当出名的WAF提供商，在Github上有17.7K个Star（截至本文发布时间），它可以防止更进一步的注入式攻击和CC攻击，甚至可以给敏感的页面加上身份验证，十分的智能。社区版本是免费的。\n根据 雷池 WAF 帮助文档 ，我使用了自动安装方法：\nbash -c &#34;$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/manager.sh)&#34; 安装好了之后，在后台设置好了反向代理。雷池WAF原理其实和Nginx差不多。都是将流量导入至自身，经过过滤后把安全的流量再转发至源站。能起到非常不错的防护效果。\n注意 雷池社区WAF仅支持10个反向代理\n雷池WAF推荐分布式安装，不推荐单主机安装\n保护雷池WAF的后台，可关闭该功能端口的公网访问（设置防火墙）\n后话 这件事情给我带来的警示是，网站的搭建固然幸苦，但是网站的部署同样也非常重要。这件事过后，我在朋友圈看到一位网友也搭建了自己的网站。出于好心的目的，我尝试检查了这个网站。没有套CDN，也没有WAF防护。甚至我使用域名查出来的源IP都能进行HTTP访问（域名访问为HTTPS）。Nginx估计也是没限制。相当之危险。为了不让他的小站变成下一个不良网站。我把建议都给到了他。\n理解搭建设计网站的辛苦，想着匆匆上线兑现自己的劳动成果，但是网站的安全可靠部署也是值得投入同样心血的活，这样做也是对自己劳动成果的负责。让我们保护好自己的网站吧。\n">
+<meta property='og:url' content='https://swagcode-io.github.io/demo/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1wordpress%E7%BD%91%E7%AB%99%E8%A2%AB%E7%A7%8D%E9%A9%AC%E5%8A%AB%E6%8C%81%E7%9A%84%E7%BB%8F%E5%8E%86/'>
+<meta property='og:site_name' content='HeTao_yz'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-09-13T12:32:46&#43;08:00'/><meta property='article:modified_time' content='2025-09-13T12:32:46&#43;08:00'/>
+<meta name="twitter:title" content="记录一次WordPress网站被种马劫持的经历">
+<meta name="twitter:description" content="注：如果你想通过此文章了解网站被种马后的具体解决方法的话，那这篇文章可能会让你失望。此篇文章更多讲述如何预防这样的事情发生，对于第一句话提出的问题回答是，我直接把整个服务器都重置了。\n不对劲的开始 2025年8月份开始，我使用WordPress建站的网站在使用移动端访问时，会自动跳转不良页面，第二次刷新才正常进入。之后再进入也是正常。但每隔一段时间，这种情况就会复现一次。这样下去，我的网站很快就会被认定为不良网站。大半年努力做的SEO也将付之东流。\n艰难的排查 一开始以为是手机DNS被劫持的原因，想着重新设置一下路由设备的DNS记录即可。但还没开始操作呢，其他地区的网友也纷纷向我反馈了这个问题。由此一下子就排除了客户端DNS的原因（之后检查了服务器的DNS服务器设置，也没有问题）。看来这次的问题比想像中的更严重。是网站服务器被种马劫持了。由于技术力低下以及前端知识的匮乏。我只能把在主流搜索引擎查询到的可能结果都一一尝试了一次。甚至使用DeepSeek查阅源码。均没有问题。这让我很崩溃。\n下图为热心网友 Creeper23456 的网站抓包结果，查询到了可疑图像。\n下定决心重构 这玩意就像艾滋病一样，预防简单，但中招解决就挺困难。由于不确定网站备份是否也已经中招，只好下定决心重构一个。幸好之前早有设计，按照原先的设计很快就完成了重构。我使用的香港的云服务器。一键重装了镜像，用核弹打蚊子的，相当无奈的方法解决了种马问题。\n之后的防护措施 使用Cloudflare的CDN和WAF 这是相当必要的。之前的网站为了保护原IP，其实也套上了Cloudflare的CDN，但之后懒得设置WAF规则，也忘记了此事，WAF网站防火墙可以防止风险IP的扫描和CC攻击等等。大家可以参考此文章进行【CloudFlare】通用防火墙安全配置分享 – Luminous&rsquo; Home 进行Cloudflare WAF规则的配置。\n使用雷池WAF反代保护源网站 雷池WAF是国内相当出名的WAF提供商，在Github上有17.7K个Star（截至本文发布时间），它可以防止更进一步的注入式攻击和CC攻击，甚至可以给敏感的页面加上身份验证，十分的智能。社区版本是免费的。\n根据 雷池 WAF 帮助文档 ，我使用了自动安装方法：\nbash -c &#34;$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/manager.sh)&#34; 安装好了之后，在后台设置好了反向代理。雷池WAF原理其实和Nginx差不多。都是将流量导入至自身，经过过滤后把安全的流量再转发至源站。能起到非常不错的防护效果。\n注意 雷池社区WAF仅支持10个反向代理\n雷池WAF推荐分布式安装，不推荐单主机安装\n保护雷池WAF的后台，可关闭该功能端口的公网访问（设置防火墙）\n后话 这件事情给我带来的警示是，网站的搭建固然幸苦，但是网站的部署同样也非常重要。这件事过后，我在朋友圈看到一位网友也搭建了自己的网站。出于好心的目的，我尝试检查了这个网站。没有套CDN，也没有WAF防护。甚至我使用域名查出来的源IP都能进行HTTP访问（域名访问为HTTPS）。Nginx估计也是没限制。相当之危险。为了不让他的小站变成下一个不良网站。我把建议都给到了他。\n理解搭建设计网站的辛苦，想着匆匆上线兑现自己的劳动成果，但是网站的安全可靠部署也是值得投入同样心血的活，这样做也是对自己劳动成果的负责。让我们保护好自己的网站吧。\n">
+    <link rel="shortcut icon" href="/img/icon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/demo/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/demo/img/avatar_hu_e63fdd64d74c8217.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/demo">HeTao_yz</a></h1>
+            <h2 class="site-description">刚刚起步的个人博客，记录折腾经历，分享知识备忘</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/demo/' >
+                
+                
+                
+                <span>首页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/demo/post/' >
+                
+                
+                
+                <span>文章</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/demo/search' >
+                
+                
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/demo/categories/' >
+                
+                
+                
+                <span>分类</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/demo/tags/' >
+                
+                
+                
+                <span>标签</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/demo/about/' >
+                
+                
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#不对劲的开始">不对劲的开始</a></li>
+    <li><a href="#艰难的排查">艰难的排查</a></li>
+    <li><a href="#下定决心重构">下定决心重构</a></li>
+    <li><a href="#之后的防护措施">之后的防护措施</a>
+      <ol>
+        <li><a href="#使用cloudflare的cdn和waf">使用Cloudflare的CDN和WAF</a></li>
+        <li><a href="#使用雷池waf反代保护源网站">使用雷池WAF反代保护源网站</a>
+          <ol>
+            <li><a href="#注意">注意</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#后话">后话</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/demo/categories/%E6%8A%80%E6%9C%AF%E6%97%A5%E5%BF%97/" >
+                技术日志
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/demo/post/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1wordpress%E7%BD%91%E7%AB%99%E8%A2%AB%E7%A7%8D%E9%A9%AC%E5%8A%AB%E6%8C%81%E7%9A%84%E7%BB%8F%E5%8E%86/">记录一次WordPress网站被种马劫持的经历</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025年9月13日</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><em>注：如果你想通过此文章了解网站被种马后的具体解决方法的话，那这篇文章可能会让你失望。此篇文章更多讲述如何预防这样的事情发生，对于第一句话提出的问题回答是，我直接把整个服务器都重置了。</em></p>
+<h2 id="不对劲的开始">不对劲的开始
+</h2><p>2025年8月份开始，我使用WordPress建站的网站在使用移动端访问时，会自动跳转不良页面，第二次刷新才正常进入。之后再进入也是正常。但每隔一段时间，这种情况就会复现一次。这样下去，我的网站很快就会被认定为不良网站。大半年努力做的SEO也将付之东流。</p>
+<h2 id="艰难的排查">艰难的排查
+</h2><p>一开始以为是手机DNS被劫持的原因，想着重新设置一下路由设备的DNS记录即可。但还没开始操作呢，其他地区的网友也纷纷向我反馈了这个问题。由此一下子就排除了客户端DNS的原因（之后检查了服务器的DNS服务器设置，也没有问题）。看来这次的问题比想像中的更严重。是网站服务器被种马劫持了。由于技术力低下以及前端知识的匮乏。我只能把在主流搜索引擎查询到的可能结果都一一尝试了一次。甚至使用DeepSeek查阅源码。均没有问题。这让我很崩溃。</p>
+<p>下图为热心网友 <a class="link" href="https://cnklp.su/"  target="_blank" rel="noopener"
+    >Creeper23456</a> 的网站抓包结果，查询到了可疑图像。</p>
+<p><img src="/demo/wpcatch.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="wpcatchpng"
+	
+	
+></p>
+<h2 id="下定决心重构">下定决心重构
+</h2><p>这玩意就像艾滋病一样，预防简单，但中招解决就挺困难。由于不确定网站备份是否也已经中招，只好下定决心重构一个。幸好之前早有设计，按照原先的设计很快就完成了重构。我使用的香港的云服务器。一键重装了镜像，用核弹打蚊子的，相当无奈的方法解决了种马问题。</p>
+<h2 id="之后的防护措施">之后的防护措施
+</h2><h3 id="使用cloudflare的cdn和waf">使用Cloudflare的CDN和WAF
+</h3><p>这是相当必要的。之前的网站为了保护原IP，其实也套上了Cloudflare的CDN，但之后懒得设置WAF规则，也忘记了此事，WAF网站防火墙可以防止风险IP的扫描和CC攻击等等。大家可以参考此文章进行<a class="link" href="https://luotianyi.vc/6140.html"  target="_blank" rel="noopener"
+    >【CloudFlare】通用防火墙安全配置分享 – Luminous&rsquo; Home</a> 进行Cloudflare WAF规则的配置。</p>
+<h3 id="使用雷池waf反代保护源网站">使用雷池WAF反代保护源网站
+</h3><p>雷池WAF是国内相当出名的WAF提供商，在Github上有17.7K个Star（截至本文发布时间），它可以防止更进一步的注入式攻击和CC攻击，甚至可以给敏感的页面加上身份验证，十分的智能。社区版本是免费的。</p>
+<p>根据 <a class="link" href="https://help.waf-ce.chaitin.cn/welcome"  target="_blank" rel="noopener"
+    >雷池 WAF 帮助文档</a> ，我使用了自动安装方法：</p>
+<pre tabindex="0"><code>bash -c &#34;$(curl -fsSLk https://waf-ce.chaitin.cn/release/latest/manager.sh)&#34;
+</code></pre><p>安装好了之后，在后台设置好了反向代理。雷池WAF原理其实和Nginx差不多。都是将流量导入至自身，经过过滤后把安全的流量再转发至源站。能起到非常不错的防护效果。</p>
+<h4 id="注意">注意
+</h4><ul>
+<li>
+<p>雷池社区WAF仅支持10个反向代理</p>
+</li>
+<li>
+<p>雷池WAF推荐分布式安装，不推荐单主机安装</p>
+</li>
+<li>
+<p>保护雷池WAF的后台，可关闭该功能端口的公网访问（设置防火墙）</p>
+</li>
+</ul>
+<h2 id="后话">后话
+</h2><p>这件事情给我带来的警示是，网站的搭建固然幸苦，但是网站的部署同样也非常重要。这件事过后，我在朋友圈看到一位网友也搭建了自己的网站。出于好心的目的，我尝试检查了这个网站。没有套CDN，也没有WAF防护。甚至我使用域名查出来的源IP都能进行HTTP访问（域名访问为HTTPS）。Nginx估计也是没限制。相当之危险。为了不让他的小站变成下一个不良网站。我把建议都给到了他。</p>
+<p>理解搭建设计网站的辛苦，想着匆匆上线兑现自己的劳动成果，但是网站的安全可靠部署也是值得投入同样心血的活，这样做也是对自己劳动成果的负责。让我们保护好自己的网站吧。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 HeTao_yz
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/demo/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css" crossorigin="anonymous" />
+<script>
+	    NProgress.start();
+	        document.addEventListener("readystatechange", () => {
+			        if (document.readyState === "interactive") NProgress.inc(0.8);
+			        if (document.readyState === "complete") NProgress.done();
+			    });
+</script>
+
+
+    </body>
+</html>
